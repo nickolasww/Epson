@@ -1,4 +1,3 @@
-import hero from "@/assets/homepage/hero.webp";
 import Icon from "@/assets/homepage/Home_Icon.png";
 import { Button } from "antd";
 

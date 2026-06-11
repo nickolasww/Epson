@@ -3,8 +3,6 @@ import { Avatar, Button, Card, Input, Spin, Typography } from 'antd'
 import { SendOutlined } from '@ant-design/icons'
 import { api } from '@/libs/axios/api'
 
-const { Title, Text } = Typography
-
 type Message = {
   role: 'user' | 'bot'
   content: string

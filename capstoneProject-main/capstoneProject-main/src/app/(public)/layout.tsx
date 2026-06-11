@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "@/app/navbar";
 import Footer from "@/app/footer";
@@ -6,7 +6,6 @@ import { useSession } from "@/app/_components/providers/session";
 import Loading from "../loading";
 
 const PublicLayout = () => {
-  const [hasBackground, setHasBackground] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const pathname = location.pathname;
@@ -57,9 +56,9 @@ const PublicLayout = () => {
 
         // Jika salah satu sudah mencapai navbar, tampilkan background
         if (mitraTop <= navbarHeight || visimisiTop <= navbarHeight) {
-          setHasBackground(true);
+          // setHasBackground(true);
         } else {
-          setHasBackground(false);
+          // setHasBackground(false);
         }
           
           ticking = false;

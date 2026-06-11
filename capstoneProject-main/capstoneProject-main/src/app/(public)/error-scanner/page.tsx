@@ -58,7 +58,7 @@ const ErrorScannerPage = () => {
         messageApi.error(errMsg);
       }
     },
-    onDrop(e) {
+    onDrop() {
       setResult(null);
     },
   };
