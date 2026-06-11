@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.bukitaurumnsejahtera.co.id/sitemap.xml

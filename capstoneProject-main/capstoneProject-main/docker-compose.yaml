@@ -1,0 +1,33 @@
+version: '3.9'
+name: espon-frontend
+
+services:
+  espon-frontend:
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    env_file:
+      - .env
+    image: ${FRONTEND_IMAGE_NAME}:${FRONTEND_IMAGE_TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        API_URL: https://espon-backend.bukitaurumnsejahtera.co.id
+      container_name: espon-frontend
+    ports:
+     - ${PORT}:80
+    expose: 
+      - "80"
+    restart: always
+      - private-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+networks:
+  private-net:
+    external: true

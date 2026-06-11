@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Fix autofill full background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  box-shadow: 0 0 0 1000px white inset !important;
+
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* 🔥 Fix Antd Password wrapper */
+.ant-input-affix-wrapper input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.custom-dragger .ant-upload,
+.custom-dragger .ant-upload-drag {
+  height: 300px;
+}
+@media (max-width: 768px) {
+  .custom-dragger .ant-upload,
+  .custom-dragger .ant-upload-drag {
+    height: 140px;
+  }
+}
+@media (min-width: 1024px) {
+  .custom-dragger .ant-upload,
+  .custom-dragger .ant-upload-drag {
+    height: 220px;
+  }
+}
+@media (min-width: 1440px) {
+  .custom-dragger .ant-upload,
+  .custom-dragger .ant-upload-drag {
+    height: 360px;
+  }
+}
+.custom-dragger .ant-upload-drag-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

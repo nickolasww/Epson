@@ -1,0 +1,53 @@
+{
+  "name": "espon-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": "20",
+    "pnpm": "8.14.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.1.0",
+    "@auth0/auth0-react": "^2.11.0",
+    "@hookform/resolvers": "^5.2.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "@tanstack/react-query": "^5.90.19",
+    "antd": "^6.2.1",
+    "axios": "^1.13.5",
+    "dayjs": "^1.11.19",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "js-cookie": "^3.0.5",
+    "lucide-react": "^0.563.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-helmet-async": "^3.0.0",
+    "react-hook-form": "^7.71.2",
+    "react-responsive": "^10.0.1",
+    "react-router-dom": "^7.12.0",
+    "tailwindcss": "^4.1.18",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4"
+  }
+}
