@@ -3,6 +3,7 @@ import SEO from "@/app/_components/seo/seo";
 import { InboxOutlined } from "@ant-design/icons";
 import type { UploadProps } from "antd";
 import { message, Upload, Spin } from "antd";
+import { env } from "@/libs/env";
 
 const { Dragger } = Upload;
 
@@ -26,11 +27,12 @@ const ErrorScannerPage = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const [result, setResult] = useState<OcrResult | null>(null);
   const [analyzing, setAnalyzing] = useState(false);
+  const uploadUrl = `${env.VITE_API_BASE_URL?.replace(/\/$/, "") ?? ""}/upload`;
 
   const props: UploadProps = {
     name: "file",
     multiple: false,
-    action: "/api/upload",
+    action: uploadUrl,
     accept: "image/*",
     showUploadList: true,
     beforeUpload: () => {
