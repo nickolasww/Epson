@@ -11,7 +11,7 @@ const PelayananKami = () => {
     },
     {
       id: 2,
-      title: 'OCR Errir Scanner',
+      title: 'OCR Error Scanner',
       description:
         'Upload foto error atau kode pada printer, AI akan membaca dan memberikan analisis solusi',
       button:"Scan Error"
